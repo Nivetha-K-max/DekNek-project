@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased dark:bg-gray-900 dark:text-gray-100;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.35s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.35s ease-out both;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+  }
+
+  .note-editor .ql-toolbar,
+  .note-editor .ql-container {
+    border-radius: 1rem;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+  }
+
+  .note-editor .ql-editor {
+    min-height: 220px;
+    color: #0f172a !important;
+    background: #ffffff !important;
+  }
+
+  .note-editor .ql-editor p,
+  .note-editor .ql-editor li,
+  .note-editor .ql-editor h1,
+  .note-editor .ql-editor h2,
+  .note-editor .ql-editor h3,
+  .note-editor .ql-editor span,
+  .note-editor .ql-editor strong,
+  .note-editor .ql-editor em,
+  .note-editor .ql-editor a {
+    color: #0f172a !important;
+  }
+
+  .note-editor .ql-editor.ql-blank::before {
+    color: #94a3b8 !important;
+  }
+
+  .note-editor .ql-toolbar button,
+  .note-editor .ql-toolbar .ql-picker-label,
+  .note-editor .ql-toolbar .ql-picker-item {
+    color: #475569;
+  }
+
+  /* Form input visibility */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    color: #0f172a !important;
+    background-color: #ffffff !important;
+  }
+
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder,
+  textarea::placeholder {
+    color: #94a3b8 !important;
+  }
+
+  select option {
+    color: #0f172a;
+    background-color: #ffffff;
+  }
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
